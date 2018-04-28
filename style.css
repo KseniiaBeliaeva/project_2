@@ -1,0 +1,185 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.job-number {
+    border: 1px solid white;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color:white !important;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+     position: relative;
+    z-index: 1;
+}
+/* .container::after {
+    content: "";
+    clear: both;
+} */
+
+
+.container::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(img/triangles-3305797.png) center center;
+    background-repeat: none;
+    opacity: 0.8;
+    width: 100%;
+    height: 100vh;
+}
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*logo*/
+#logo-container {
+    width: 100%;
+}
+#logo{
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*2 blocks*/
+.block {
+    float: left;
+    text-align: center;
+}
+#block-left {
+    width: 30%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#block-right {
+    width: 70%;
+    background-color: #fff;
+    opacity: 0.8;
+}
+#block-right img {
+    width:100%;
+}
+.add-padding {
+    padding: 15px;
+    border: 1px solid white;
+}
+/*buttons (navigation) */
+.arrow {
+height:0;
+width:0;
+padding: 0;
+outline: 0;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+}
+.arrow-top {
+border-bottom: 50px solid darkslateblue;
+}
+.arrow-bottom {
+border-top: 50px solid darkslateblue;
+}
+.section-list {
+    width: 100%;
+}
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.section-list_buttons {
+    padding: 15px;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.8s;
+    background-size: 200% auto;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    margin: 5% auto;
+    border: 1px solid white;
+    text-decoration: none;
+}
+
+.triangle-effect {
+    transition: all 0.9s;
+    position: relative;
+    overflow: hidden;
+}
+
+.triangle-effect::after,
+.triangle-effect::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 100px);
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 190px solid rgba(255,255,255,0.25);
+    z-index: 1;
+    transition: inherit;
+} 
+.triangle-effect:hover::before {
+    opacity: 1;
+    -webkit-transform: translate(0px,-190px);
+    transform: translate(0px,-190px);
+}
+
+.triangle-effect:hover::after {
+    opacity: 1;
+    -webkit-transform: translate(0px,-150px);
+    transform: translate(0px,-150px);
+}
+
+.up-down-buttons {
+    font-size: 35px;
+}
+/*table*/
+
+.picking-shedule,
+.description,
+.section-list,
+.job-number  {
+background-image:linear-gradient(to top,#222222, #333333);
+color:#b7b8b8;
+letter-spacing: 0.8px;
+}
+
+table {
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+td,th {
+    padding: 15px;
+}
+.row:nth-of-type(odd) {
+    background-color: #EDEDED;
+}
+.row:nth-of-type(even) {
+    background-color: #fffcfc;
+}
+
+.temperature-chart {
+    box-sizing: border-box;
+height:500px;
+width:50%;
+float:left;
+padding: 20px;
+}

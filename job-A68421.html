@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href='style.css'>
+    <link rel="stylesheet" type="text/css" href='job-style.css'>
+    <title>JOB A68421</title>
+    <!--Font awesome (top-bottom arrows)-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <!--Font-family for the whole page-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!--Left Block-->
+        <div class="block" id="block-left">
+            <div class="section-list add-padding">
+                <!--<img id="logo" src="logo.png">-->
+                Section List</div>
+            <a href="#">
+                <i class="fas fa-chevron-up  up-down-buttons"></i>
+            </a>
+            <div id="buttonContainer"></div>
+            <a href="#">
+                <i class="fas fa-chevron-down  up-down-buttons"></i>
+            </a>
+        </div>
+
+        <!--Right Block-->
+        <div class="block" id="block-right">
+            <!--Modal box-->
+            <div class="modal-box" id="modal">
+                <div class="modal-content">
+                    Some text
+                    <span id="close-btn">&times;</span>
+                    </div>
+            </div>
+            <div class="job-number">JOB: A68421 – COLOUR: Metallic Lustre (MTLP)</div>
+            <div class="picking-shedule add-padding">Picking Schedule</div>
+           
+            <!-- Table -->
+            <div id="job-table"></div>
+            <!--/Table-->
+        </div>
+        <!--/Right Block-->
+    </div>
+
+    <!--
+     1. show only limited number of buttons
+     2. on scroll or button clicking show other buttons
+
+     1. left block height = right block height
+
+     1. fixed top ? (job-number section)
+
+     1. go to the other html page on button click
+
+     1.
+    -->
+
+    <script src="sections.js"></script>
+    <script src="picking-schedule.js"></script>
+</body>
+
+</html>

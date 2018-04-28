@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href='style.css'>
+    <title>Project_1</title>
+    <!--Font awesome (top-bottom arrows)-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <!--Font-family for the whole page-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/13.2.9/js/dx.chartjs.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!--Left Block-->
+        <div class="block" id="block-left">
+            <!-- <div class="logo">
+                <img src="img/logo1.png" alt="" class="logo">
+            </div> -->
+            <div class="section-list add-padding">
+                <!--<img id="logo" src="logo.png">-->
+                Job List</div>
+            <a href="#">
+                <i class="fas fa-chevron-up  up-down-buttons"></i>
+            </a>
+            <div id="buttonContainer"></div>
+
+            <a href="#">
+                <i class="fas fa-chevron-down  up-down-buttons"></i>
+            </a>
+        </div>
+
+        <!--Right Block-->
+        <div class="block" id="block-right">
+            <!-- <img src="chart.png" alt="chart">
+            <img src="chart.png" alt="chart"> -->
+            <div class="section-list add-padding">Dashboard</div>
+            <div id="temp1" class="temperature-chart">
+
+            </div>
+            <div id="temp2" class="temperature-chart">
+            </div>
+           </div>
+
+           
+        <!--/Right Block-->
+
+</div>
+    <!--
+
+     1. show only limited number of buttons
+     2. on scroll or button click show other buttons
+
+     1. left block height = right block height
+
+     1. fixed top ? (job-number section)
+
+     1. go to the other html page on button click
+
+    -->
+
+    <script src="job-list.js"></script>
+    <script src="sections.js"></script>
+  <script>
+    //DASHBOARD CHART
+    function setChart(id, value) {
+        $(id).dxCircularGauge({
+            rangeContainer: {
+                offset: 10,
+                ranges: [
+                    { startValue: 0, endValue: 80, color: '#00B' },
+                    { startValue: 80, endValue: 120, color: '#41A128' },
+                    { startValue: 120, endValue: 200, color: '#E00' }
+                ]
+            },
+            scale: {
+                startValue: 0, endValue: 200,
+                majorTick: { tickInterval: 20 },
+                label: {
+                    format: 'number'
+                }
+            },
+            title: {
+                text: 'Temperature',
+                subtitle: 'test',
+                position: 'top-center'
+            },
+            tooltip: {
+                enabled: true,
+                format: 'number',
+                customizeText: function (arg) {
+                    return 'Optimal ' + arg.valueText;
+                }
+            },
+            value: value,
+            subvalues: [85]
+        });
+    }
+    setChart("#temp1", 115);
+    setChart("#temp2", 75);
+</script>
+</body>
+
+</html>
