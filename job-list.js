@@ -18,9 +18,9 @@ var jobList = [
     }
 ];
 
-var modal = '<div class="modal">' +
-    '<div class="modal-container">' +
-    '<p>Some text</p><img src="img/logo1.png"></div></div>';
+// var modal = '<div class="modal">' +
+//     '<div class="modal-container">' +
+//     '<p>Some text</p><img src="img/logo1.png"></div></div>';
 
 var sectionBar = jobList.map(function (navigationObject) {
     
@@ -30,7 +30,7 @@ var sectionBar = jobList.map(function (navigationObject) {
         + '.html">' +
         navigationObject.title + '</a>');
 }).join("");
-document.getElementById('ssection-list_buttons').innerHTML = modal;
+
 document.getElementById('buttonContainer').innerHTML = sectionBar;
 
 
