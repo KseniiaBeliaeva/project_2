@@ -17,7 +17,7 @@ var sectionList = [
 ];
 
 var sectionBar = sectionList.map(function (navigationObject) {
-    return ('<a class="section-list_buttons triangle-effect" id="ssection-list_buttons"'
+    return ('<a class="section-list_buttons triangle-effect"'
         + ' href="section-'
         + navigationObject.title
         + '.html">' +

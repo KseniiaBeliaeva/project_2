@@ -24,7 +24,7 @@ var jobList = [
 
 var sectionBar = jobList.map(function (navigationObject) {
     
-    return ('<a class="section-list_buttons"'
+    return ('<a class="section-list_buttons triangle-effect"'
         + ' href="job-'
         + navigationObject.title
         + '.html">' +
