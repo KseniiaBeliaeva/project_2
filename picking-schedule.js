@@ -45,7 +45,9 @@ pickingSchedule.forEach(function (object) {
     var firstColumn = $('<td></td>');
 
     var link = $('<a href="#">' + object.section + '</a>');
-    link.click(function () { alert('It\'s located on ' + object.location); });
+    link.click(function () {
+        modal(row.html());
+    });
     link.appendTo(firstColumn);
     firstColumn.prependTo(row);
     row.appendTo($pickingScheduleComponent);

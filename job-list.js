@@ -18,9 +18,6 @@ var jobList = [
     }
 ];
 
-// var modal = '<div class="modal">' +
-//     '<div class="modal-container">' +
-//     '<p>Some text</p><img src="img/logo1.png"></div></div>';
 
 var sectionBar = jobList.map(function (navigationObject) {
     
