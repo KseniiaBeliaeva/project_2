@@ -85,7 +85,7 @@ body {
     clear: both;
 }
 /*logo*/
-#logo-container {
+/* #logo-container {
     width: 100%;
 }
 #logo{
@@ -93,10 +93,11 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-}
+} */
 /*2 blocks*/
 .block {
     float: left;
+    height: 100%;
     text-align: center;
 }
 #block-left {
@@ -104,6 +105,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
+    flex-grow: 2;
 }
 #block-right {
     width: 70%;
@@ -139,6 +141,7 @@ border-top: 50px solid darkslateblue;
     display: flex;
     flex-direction: column;
     width: 80%;
+    flex-grow: 2;
 }
 
 .section-list_buttons {
@@ -188,9 +191,22 @@ border-top: 50px solid darkslateblue;
     transform: translate(0px,-150px);
 }
 
+.up-down-buttons_container {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5%;
+    background-color: white;
+}
 .up-down-buttons {
     font-size: 35px;
-}
+     position: absolute;
+    left: 0;
+    right: 0;
+    line-height: 1.5 !important;
+} 
 /*table*/
 
 .picking-shedule,
